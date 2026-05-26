@@ -8,7 +8,9 @@ public class Mago extends Personagem {
 
     
     // * Construtor para criar um Mago.
-
+    public Mago(String nome, int nivel, int pontosDeVida, double poderBase) {
+        super(nome, "Mago", nivel, pontosDeVida, poderBase);
+    }
 
 
     /**
@@ -17,7 +19,7 @@ public class Mago extends Personagem {
      */
     @Override
     public void usarHabilidade() {
-
+        System.out.println(getNome() + " conjura uma poderosa magia de fogo!");
     }
 }
 

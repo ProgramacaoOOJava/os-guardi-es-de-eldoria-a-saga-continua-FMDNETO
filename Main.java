@@ -13,12 +13,21 @@ public class Main {
         System.out.println("Os Guardiões se preparam para a batalha!\n");
         
         // Criando uma lista polimórfica de personagens
+        ArrayList<Personagem> personagens = new ArrayList<>();
         
         // Adicionando Magos à lista
+        personagens.add(new Mago("Gandalf", 10, 100, 50.0));
+        personagens.add(new Mago("Merlin", 15, 120, 60.0));
         
         // Adicionando Guerreiros à lista
+        personagens.add(new Guerreiro("Aragorn", 20, 150, 70.0));
+        personagens.add(new Guerreiro("Legolas", 25, 130, 80.0));
         
         // Percorrendo a lista e demonstrando polimorfismo
-        
+        for (Personagem p : personagens) {
+            System.out.println(p);
+            p.usarHabilidade();
+        }
+    }
 }
 
