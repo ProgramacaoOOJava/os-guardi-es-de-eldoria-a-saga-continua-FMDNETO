@@ -23,6 +23,10 @@ public class Main {
         personagens.add(new Guerreiro("Aragorn", 20, 150, 70.0));
         personagens.add(new Guerreiro("Legolas", 25, 130, 80.0));
         
+        // Adicionando Curandeiros à lista
+        personagens.add(new Curandeiro("Elrond", 18, 110, 40.0));
+        personagens.add(new Curandeiro("Galadriel", 22, 90, 45.0));
+
         // Percorrendo a lista e demonstrando polimorfismo
         for (Personagem p : personagens) {
             System.out.println(p);
