@@ -1,4 +1,4 @@
-public class Curandeiro {
+public class Curandeiro extends Personagem {
     // * Construtor para criar um Curandeiro.
     public Curandeiro(String nome, int nivel, int pontosDeVida, double poderBase) {
         super(nome, "Curandeiro", nivel, pontosDeVida, poderBase);

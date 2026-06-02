@@ -1,4 +1,4 @@
-package eldoria;
+
 
 /**
  * Classe que representa um Guerreiro no reino de Eldoria.

@@ -1,4 +1,3 @@
-package eldoria;
 
 import java.util.Objects;
 
@@ -56,10 +55,10 @@ public abstract class Personagem {
         this.classe = classe;
     }
     public void setPontosDeVida(int pontosDeVida) {
-        if (pontosVida < 0) {
+        if (pontosDeVida < 0) {
             throw new IllegalArgumentException("Os pontos de vida não podem ser negativos.");
         }
-        this.pontosVida = pontosVida;
+        this.pontosDeVida = pontosDeVida;
     }
     public void setNivel(int nivel) {
         if (nivel < 1) {
@@ -89,11 +88,30 @@ public abstract class Personagem {
      * Deve ser sobrescrito pelas subclasses para implementar comportamentos específicos.
      */
     public abstract void usarHabilidade();
-    
+
+    //Método que exibe informações do personagem, incluindo nome, classe, nível, pontos de vida e poder base.
+    public void exibirStatus(){
+        System.out.println("=== STATUS DO PERSONAGEM ===");
+        System.out.println("Nome: " + nome);
+        System.out.println("Classe: " + classe);
+        System.out.println("Nível: " + nivel);
+        System.out.println("Pontos de Vida: " + pontosDeVida);
+        System.out.println("Poder Base: " + poderBase); 
+    }
+
+    //método protegido (protected) chamado atribuirBencao(double valor), que aumenta poderBase.
+    protected void atribuirBencao(double valor) {
+        if (valor < 0) {
+            throw new IllegalArgumentException("O valor da bênção não pode ser negativo.");
+        }
+        this.poderBase += valor;
+        System.out.println(nome + " recebeu uma bênção! Poder base aumentado para: " + poderBase);
+    }
+        
 
     /**
      * Sobrescrita do método toString() para exibir informações do personagem.
-     * @return String formatada com todos os atributos do personagem
+     * return String formatada com todos os atributos do personagem
      */
     @Override
     public String toString() {
